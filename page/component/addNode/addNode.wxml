@@ -1,0 +1,38 @@
+<view class="main">
+    <view class="conts">
+        <textarea class="areas" placeholder='请在此输入你的手账' minlength="{{min}}" maxlength="{{max}}"  rows="4" bindinput="inputs" row> 
+            <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
+            <!-- <text class="hint">{{texts}}</text> -->
+        </textarea>
+        <view class="imgList" wx:if='{{nodeImgUrl!=""}}'>
+            <view class="imgBlock" >
+              <image mode='aspectFill' src='{{nodeImgUrl}}' data-src='{{nodeImgUrl}}' bindtap="previewImage"></image>  
+            </view>
+        </view>
+    </view>
+    <view class="typeSet">
+       类型：<text bindtap="openActionSheet">{{typeName}}</text>
+       <view class="imgUploadBtn" bindtap='commitImg'>
+         <text>添加图片：</text>
+         <image mode='widthFix' src='../../../image/uploadImgBtn.png'></image> 
+       </view>
+    </view>
+     <view class="btnBox">
+      <zan-button type="primary" bindtap="commit">提交</zan-button>
+    </view>
+    <view class="actionsheet-container">
+      <!-- 监听自定义事件 cancel 和 actionclick，绑定回调函数 -->
+      <zan-actionsheet
+        show="{{ show }}"
+        actions="{{ actions }}"
+        cancel-text="{{ cancelText }}"
+        cancel-with-mask="{{ cancelWithMask }}"
+        bind:cancel="closeActionSheet"
+        bind:actionclick="handleActionClick"
+      >
+      </zan-actionsheet>
+    </view>
+    <!-- <image src='{{tempFilePath}}' mode="top" /> -->
+      <!-- 利用绝对定位 隐藏canvas -->
+    <canvas canvas-id="photo_canvas" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;position: absolute;left:-700px;bottom:-700px;"></canvas>
+</view>

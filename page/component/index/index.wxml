@@ -1,0 +1,25 @@
+<view class="main">
+    <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称</button>   -->
+  <view class="header">
+        <image src="{{thumb}}" class="thumb"></image>
+        <text class="nickname">{{nickname}}</text>
+ </view>
+  <!-- <view class="indexBgBox">
+     <image src='{{imageSrc}}' mode='widthFix'></image>
+  </view> -->
+   <swiper  indicator-dots="{{false}}" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="{{false}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}" mode='widthFix' class="slide-image" width="100%"/>
+            </swiper-item>
+        </block>
+  </swiper>  
+  <view class="btnBox" style="position:fixed; bottom:80rpx;left:0;right:0;">
+    <view class="tipBgBox" style="">
+     <image src='../../../image/tipbg.png' mode='widthFix'></image>
+   </view>
+    <zan-button type="primary" bindtap="scanCode">扫条码</zan-button>
+  </view>
+  <zan-dialog id="zan-dialog-test"></zan-dialog>
+
+</view>

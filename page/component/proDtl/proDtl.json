@@ -1,0 +1,14 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "",
+  "usingComponents": {
+     "zan-button": "../../../zanui/btn/index",
+     "zan-dialog": "../../../zanui/dialog/index",
+      "zan-toast": "../../../zanui/toast/index",
+      "zan-stepper": "../../../zanui/stepper/index",
+      "zan-loading": "../../../zanui/loading/index",
+      "zan-icon": "../../../zanui/icon/index",
+      "zan-loading": "../../../zanui/loading/index"
+      
+  }
+}

@@ -1,0 +1,44 @@
+<view class="main">
+   
+  <view class="proHeader xborder-b" bindtap='turnToEditPro'>
+      <text wx:if="{{proNameUndefine&&!addnodeHide}}" class="undeLine">{{proInfo.name}}</text>
+      <text wx:else>{{proInfo.name}}</text>
+     
+      <!-- <text class="editProName">[编辑]</text> -->
+  </view>
+  <view class="mesList" wx:if="{{nodeList.length>0}}">
+    <view class="mesItem" wx:for="{{nodeList}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="item">
+       <view class='layer'>#{{item.layer}}</view>
+       <view class="content xborder-b">
+          <view class="nodeImgBox" wx:if="{{item.nodeImgUrl&&item.nodeImgUrl!=''}}">
+             <image mode='aspectFill' src='{{item.nodeImgUrl}}' data-src='{{item.nodeImgUrl}}' bindtap="previewImage"></image>
+          </view>
+          <view class="nodeTxtBox {{item.nodeImgUrl&&item.nodeImgUrl!=''?'spaceLeft':''}}">
+             {{item.content}}
+          </view>
+       </view>
+       <view class="footer">
+           <view class="authorInfo">
+               <image mode='widthFix' src='{{item.userImgUrl}}'></image>
+              <text>{{item.author}}<text class="dot">·</text>{{typeArr[item.typeIndex]}}</text>
+           </view>
+           <view class="creatDate">{{item.creatDate}}</view>
+       </view>
+    </view>
+  </view>
+  <view wx:else class="emptyTip">
+      暂无手账，可以点击右下角按钮去添加
+  </view>
+  <view class="addNodeBtn" bindtap="turnToSubmit" >
+  <!-- wx:if='{{!addnodeHide}}' -->
+     <image src='../../../image/edit.png'></image>
+  </view>
+  <zan-dialog id="zan-dialog-test"></zan-dialog>
+  <view class="loading" hidden="{{!bottomLoading}}">
+    <view class="loadingBody" >
+      <zan-loading class="bottom-zan-loading" type="spinner" color="black"></zan-loading>正在加载
+    </view>
+  </view>
+  <view class="loading complete" hidden="{{loadingComplete||bottomLoading||nodeList.length<10}}" bindtap='loadmore'>点击加载更多</view>
+  <view class="loading complete" hidden="{{!loadingComplete}}">已全部加载</view>
+</view>

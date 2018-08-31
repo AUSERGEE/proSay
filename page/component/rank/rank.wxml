@@ -1,0 +1,23 @@
+<view class="main">
+    <view class="rankList" wx:if="{{vcode==2}}">
+        <view class="rankItem xborder-b" wx:for="{{rankList}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="item" data-barcode="{{item.code}}" bindtap='turnToProDtl'>
+            <view class="rankIndex">{{index+1}}</view>
+            <view class="proName">
+               {{item.name}}
+            </view>
+            <view class="account">
+               <text class="TxtColor_blue">{{item.nodeAccount}}</text>条留言
+            </view>
+        </view>
+    </view>
+    <view wx:else class="emptyTip" style="text-align:center; color:#999; margin-top:22px;">
+        
+    </view>
+    <view class="loading" hidden="{{!bottomLoading}}">
+      <view class="loadingBody" >
+        <zan-loading class="bottom-zan-loading" type="spinner" color="black"></zan-loading>正在加载
+      </view>
+    </view>
+    <view class="loading complete" hidden="{{loadingComplete||bottomLoading}}" bindtap='loadmore'>点击加载更多</view>
+    <view class="loading complete" hidden="{{!loadingComplete}}">已全部加载</view>
+</view>

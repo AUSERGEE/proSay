@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "留言建议",
+   "usingComponents": {
+        "zan-field": "../../../../zanui/field/index",
+        "zan-button": "../../../../zanui/btn/index"
+   }
+}

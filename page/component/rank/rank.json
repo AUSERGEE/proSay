@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "排行",
+  "usingComponents": {
+    "zan-loading": "../../../zanui/loading/index"
+  }
+}

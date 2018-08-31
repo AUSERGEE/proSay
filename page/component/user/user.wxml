@@ -1,0 +1,10 @@
+<view class="main">
+    <view class="header">
+        <image src="{{thumb}}" class="thumb"></image>
+        <text class="nickname">{{nickname}}</text>
+        
+    </view>
+   <zan-cell-group>
+      <zan-cell title="留言建议" is-link url="./suggest/suggest"></zan-cell>
+   </zan-cell-group>
+</view>

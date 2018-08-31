@@ -1,0 +1,102 @@
+@import '../../common/common.wxss';
+
+
+swiper {height:380rpx;}
+swiper image{width:100%;}
+.header{
+    position: relative;
+    height: 160rpx;
+    line-height: 100rpx;
+    padding:30rpx 30rpx 30rpx 150rpx;
+    box-sizing: border-box;
+    background: #479de6;
+    font-size: 28rpx;
+    color: #fff;
+}
+.header .thumb{
+    position: absolute;
+    left: 30rpx;
+    top: 30rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+.indexBgBox{
+  margin: 120rpx 0 0 0;
+  text-align: center;
+}
+.indexBgBox image{
+  width:90%;
+  text-align: center;
+}
+.tipBgBox{
+  text-align: center;
+}
+.tipBgBox image{
+  width:92%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prolist{
+  margin:20rpx 24rpx 0 24rpx;
+}
+.prolistItem{
+   background:#FFF;
+   border-bottom:1px solid #e3e3e3;
+   padding:24rpx 32rpx; 
+   position:relative;
+   height:132rpx;
+}
+.prolistItem:last-child{
+  border-bottom:0px solid #e3e3e3;
+}
+.proTit{
+  font-size:48rpx;
+  color:#333;
+  line-height:60rpx;
+}
+.price{
+  color:#666;
+  line-height:44rpx;
+  font-size:28rpx;
+}
+.red{
+   color:#FF0000;
+}
+.stepperbox{
+  position:absolute;
+  right:24rpx;
+  bottom:20rpx;
+}
+.listBar{
+  margin:0rpx 24rpx 20rpx 24rpx;
+  height:82rpx;
+  line-height:82rpx;
+  border-top:1px solid #d3d3d3;
+  background:#FFF;
+}
+.delItem{
+  position:absolute;
+  right:18rpx;
+  top:0rpx;
+  font-size:20px;
+  color:#666
+}

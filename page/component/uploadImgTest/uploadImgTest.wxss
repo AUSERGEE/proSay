@@ -1,0 +1,11 @@
+@import '../../common/common.wxss';
+
+.imgBlock{
+
+ width:60px;
+ height:60px;
+}
+.imgBlock image{
+   width:60px;
+ height:60px;
+}

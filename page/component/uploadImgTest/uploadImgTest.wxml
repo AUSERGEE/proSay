@@ -1,0 +1,8 @@
+<view class="main">
+     <view class="btnBox">
+      <zan-button type="primary" bindtap="commitImg">上传图片</zan-button>
+    </view>
+    <view class="imgBlock" wx:if='{{imgUrl!=""}}' >
+        <image mode='aspectFill' src='{{imgUrl}}'></image>  
+    </view>
+</view>

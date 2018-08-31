@@ -1,0 +1,46 @@
+@import '../../common/common.wxss';
+.conts{
+  height:auto;
+  border:1rpx soldi red;
+  margin-top:30rpx;
+  margin:30rpx 24rpx 0;
+
+}
+.areas{
+  height:360rpx;
+  font-size: 36rpx;
+  text-indent: 28rpx;
+  border: 1rpx solid gainsboro;
+  padding:20rpx;
+  padding-bottom: 30rpx;
+  margin: 0 auto;
+  overflow: hidden;   
+  position: relative; 
+  background:#fff;
+  width:100%;
+  box-sizing: border-box;
+  border-radius:2px;
+}
+.currentWordNumber{
+  font-size: 28rpx;
+  color: gray;
+  position: absolute;
+  right: 30rpx;
+  bottom: 6rpx;
+}
+.hint{
+   font-size: 28rpx;
+   position: absolute;
+   top: 120rpx;
+   left: 30rpx;
+   color: #FF6600;
+}
+
+.typeSet{
+  line-height:60rpx;
+  font-size: 28rpx;
+  padding:0 24px;
+}
+.typeSet text{
+  color:#008FFF;
+}

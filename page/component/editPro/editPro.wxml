@@ -1,0 +1,11 @@
+<view class="main">
+    <zan-cell-group>
+      <zan-field title="商品名称" 
+         value="{{ proName }}"
+         bind:change="handleFieldChange"
+      ></zan-field>
+    </zan-cell-group>
+     <view class="btnBox">
+      <zan-button type="primary" bindtap="commit">提交</zan-button>
+    </view>
+</view>

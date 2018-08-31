@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "添加手账",
+   "usingComponents": {
+        "zan-field": "../../../../zanui/field/index",
+        "zan-button": "../../../../zanui/btn/index",
+        "zan-actionsheet": "../../../../zanui/actionsheet/index"
+   }
+}

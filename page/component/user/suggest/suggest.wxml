@@ -1,0 +1,13 @@
+<view class="main">
+    <view class="conts">
+        <textarea class="areas" placeholder='如果在你使用中的过程遇到了问题或者有什么好的建议，欢迎在这里留言；也可以直接联系管理员微信：lin123456xf' minlength="{{min}}" maxlength="{{max}}"  rows="4" bindinput="inputs" value="{{textContent}}" row> 
+            <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
+            <!-- <text class="hint">{{texts}}</text> -->
+        </textarea>
+    </view>
+     <view class="btnBox">
+      <zan-button type="primary" bindtap="commit">提交</zan-button>
+    </view>
+
+   
+</view>
